@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battles du Phil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="splash" id="splash">
+    <div class="splash-text">Battle.</div>
+  </div>
+
+  <div id="app">
+    <div class="screen home-screen home-content" id="home-content">
+      <div class="home-header">
+        <div class="eyebrow">Le Phil &middot; Pause caf&eacute;</div>
+        <h1 class="title-lg">Battles du Phil</h1>
+        <p class="subtitle">Un t&eacute;l&eacute;phone, deux joueurs, sept questions. &Agrave; toi de choisir ta battle.</p>
+      </div>
+
+      <a href="culture.html" class="game-card card-cream">
+        <div class="card-number">01</div>
+        <div class="card-body">
+          <h2>Culture g&eacute;n&eacute;rale</h2>
+          <p>Histoire, art, sciences, sport &mdash; sept questions pour briller.</p>
+        </div>
+        <div class="card-arrow">&rarr;</div>
+      </a>
+
+      <a href="calcul.html" class="game-card card-terracotta">
+        <div class="card-number">02</div>
+        <div class="card-body">
+          <h2>Calcul mental</h2>
+          <p>10 secondes par question. Qui calcule le plus vite ?</p>
+        </div>
+        <div class="card-arrow">&rarr;</div>
+      </a>
+
+      <a href="utc.html" class="game-card card-sage">
+        <div class="card-number">03</div>
+        <div class="card-body">
+          <h2>Sp&eacute;cial UTC</h2>
+          <p>Qui conna&icirc;t le mieux son campus ?</p>
+        </div>
+        <div class="card-arrow">&rarr;</div>
+      </a>
+
+      <p class="footer-note">Rivaux ici. Alli&eacute;s en amphi.<br>Le Phil &middot; Projet TX #7717</p>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.getElementById('splash').classList.add('hide');
+        document.getElementById('home-content').classList.add('show');
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

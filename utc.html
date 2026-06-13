@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle UTC &mdash; Le Phil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.QUIZ_CONFIG = {
+      title: "Battle UTC",
+      description: "Qui connaît le mieux son campus ? À chaque question, c'est l'autre joueur qui prend le téléphone.",
+      accentColor: "#7A9B72",
+      accentText: "#1A1612",
+      timeLimit: 15,
+      questions: [
+        {
+          q: "En quelle année l'UTC (Université de Technologie de Compiègne) a-t-elle été fondée ?",
+          options: ["1972", "1985", "1968", "1990"],
+          correct: 0
+        },
+        {
+          q: "Qu'est-ce qui différencie l'UTC des autres écoles d'ingénieurs françaises ?",
+          options: [
+            "Un fort ancrage en sciences humaines et sociales intégré à la formation",
+            "Elle est la plus grande école d'ingénieurs de France",
+            "Elle ne propose aucun cours en anglais",
+            "Elle n'a pas de campus physique"
+          ],
+          correct: 0
+        },
+        {
+          q: "Quel est le mineur dédié à la philosophie, à la technologie et à la cognition à l'UTC ?",
+          options: ["PHITECO", "CCT", "SISTER", "TCN"],
+          correct: 0
+        },
+        {
+          q: "Où peut-on faire la fête tous les soirs à l'UTC ?",
+          options: ["Au Pic", "Au Phil", "À la BUTC", "Au FabLab"],
+          correct: 0
+        },
+        {
+          q: "Quelle ville accueille le campus principal de l'UTC ?",
+          options: ["Compiègne", "Troyes", "Mont-Béliard", "Belfort"],
+          correct: 0
+        },
+        {
+          q: "Pendant les examens, jusqu'à quelle heure la BU de l'UTC est-elle ouverte ?",
+          options: ["22h", "19h", "20h", "21h"],
+          correct: 0
+        },
+        {
+          q: "Quel est le meilleur endroit pour faire sa pause café à l'UTC ?",
+          options: ["Le Phil"],
+          correct: 0
+        }
+      ]
+    };
+  </script>
+  <script src="quiz.js"></script>
+</body>
+</html>

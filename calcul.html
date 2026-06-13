@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Calcul Mental &mdash; Le Phil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.QUIZ_CONFIG = {
+      title: "Battle Calcul Mental",
+      description: "10 secondes par question, sans calculatrice. À chaque question, c'est l'autre joueur qui prend le téléphone.",
+      accentColor: "#C4735A",
+      accentText: "#1A1612",
+      timeLimit: 10,
+      questions: [
+        {
+          q: "17 × 4 = ?",
+          options: ["68", "72", "64", "76"],
+          correct: 0
+        },
+        {
+          q: "256 ÷ 8 = ?",
+          options: ["32", "28", "36", "24"],
+          correct: 0
+        },
+        {
+          q: "15% de 200 = ?",
+          options: ["30", "25", "35", "20"],
+          correct: 0
+        },
+        {
+          q: "13² = ?",
+          options: ["169", "156", "144", "181"],
+          correct: 0
+        },
+        {
+          q: "3/4 + 1/2 = ?",
+          options: ["5/4", "4/6", "1", "7/8"],
+          correct: 0
+        },
+        {
+          q: "123 + 456 + 78 = ?",
+          options: ["657", "647", "667", "637"],
+          correct: 0
+        },
+        {
+          q: "Le double de 37, moins 9 = ?",
+          options: ["65", "74", "56", "63"],
+          correct: 0
+        }
+      ]
+    };
+  </script>
+  <script src="quiz.js"></script>
+</body>
+</html>

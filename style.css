@@ -1,0 +1,428 @@
+:root {
+  --bg: #1A1612;
+  --card: #F5EFE6;
+  --terracotta: #C4735A;
+  --sage: #7A9B72;
+  --yellow: #F5C842;
+  --text-dark: #1A1612;
+  --text-light: #F5EFE6;
+  --accent: var(--terracotta);
+  --accent-text: var(--text-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-light);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--text-light);
+}
+
+.btn-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.back-link {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.title-lg {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 360px;
+}
+
+/* ===== Index page ===== */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity 0.6s ease;
+}
+
+.splash.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-text {
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.home-content {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.home-content.show {
+  opacity: 1;
+}
+
+.home-screen {
+  gap: 16px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.home-header {
+  margin-bottom: 8px;
+}
+
+.game-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  transition: transform 0.15s ease;
+}
+
+.game-card:active {
+  transform: scale(0.98);
+}
+
+.game-card.card-cream {
+  background: var(--card);
+  color: var(--text-dark);
+}
+
+.game-card.card-terracotta {
+  background: var(--terracotta);
+  color: var(--text-light);
+}
+
+.game-card.card-sage {
+  background: var(--sage);
+  color: var(--text-light);
+}
+
+.game-card .card-number {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  opacity: 0.5;
+  min-width: 40px;
+}
+
+.game-card .card-body {
+  flex: 1;
+}
+
+.game-card .card-body h2 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.game-card .card-body p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.game-card .card-arrow {
+  font-size: 1.6rem;
+  opacity: 0.6;
+}
+
+.footer-note {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ===== Quiz screens ===== */
+
+.names-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.name-input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 2px solid var(--card);
+  background: transparent;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.name-input::placeholder {
+  color: rgba(245, 239, 230, 0.4);
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.turn-banner {
+  gap: 12px;
+}
+
+.turn-player {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.progress-pill {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.question-screen {
+  gap: 20px;
+  justify-content: flex-start;
+  padding-top: 48px;
+}
+
+.timer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.timer-track {
+  flex: 1;
+  height: 8px;
+  border-radius: 100px;
+  background: rgba(245, 239, 230, 0.15);
+  overflow: hidden;
+}
+
+.timer-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 100px;
+  transition: width 0.1s linear;
+}
+
+.timer-number {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  min-width: 32px;
+  text-align: right;
+}
+
+.question-text {
+  font-size: 1.4rem;
+  line-height: 1.35;
+  margin: 8px 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.options-grid.single-col {
+  grid-template-columns: 1fr;
+}
+
+.option-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 18px 12px;
+  border-radius: 16px;
+  border: 2px solid var(--card);
+  background: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  min-height: 64px;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.option-btn.full-width {
+  grid-column: 1 / -1;
+}
+
+.option-btn.correct {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: var(--text-dark);
+}
+
+.option-btn.wrong {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: var(--text-dark);
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+.feedback-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-height: 1.5em;
+}
+
+.results-screen {
+  gap: 12px;
+}
+
+.score-table {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(245, 239, 230, 0.08);
+}
+
+.score-row.winner {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.score-row .player-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.score-row .player-score {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.winner-banner {
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+@media (min-width: 540px) {
+  .splash-text {
+    font-size: 5.5rem;
+  }
+}
